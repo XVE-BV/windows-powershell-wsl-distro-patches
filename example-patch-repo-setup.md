@@ -31,7 +31,7 @@ patch_up() {
     local target_file="/home/xve/.zshrc"
     local backup_path
     backup_path=$(create_backup "$target_file" "$PATCH_NAME")
-    
+
     if ! grep -q "# XVE Welcome Message" "$target_file"; then
         cat >> "$target_file" << 'EOF'
 
@@ -41,7 +41,7 @@ echo "Type 'help' for available commands"
 EOF
         echo "Added welcome message to $target_file"
     fi
-    
+
     return 0
 }
 
@@ -61,7 +61,7 @@ PATCH_DESCRIPTION="Install essential development tools"
 
 patch_up() {
     echo "Installing development tools..."
-    
+
     local tools=("htop" "tree" "curl" "wget")
     for tool in "${tools[@]}"; do
         if ! command -v "$tool" >/dev/null 2>&1; then
@@ -71,7 +71,7 @@ patch_up() {
             echo "Already installed: $tool"
         fi
     done
-    
+
     return 0
 }
 
@@ -140,12 +140,15 @@ on:
     tags:
       - 'v*'
 
+permissions:
+  contents: write
+
 jobs:
   release:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    
+
     - name: Create Release
       uses: actions/create-release@v1
       env:
