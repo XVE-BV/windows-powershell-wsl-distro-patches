@@ -19,7 +19,7 @@ The patch system now downloads patches from external GitHub repositories, allowi
 ### Default Configuration
 
 By default, the system is configured to download patches from:
-- **Repository**: `jonasvanderhaegen-xve/xve-wsl-patches`
+- **Repository**: `XVE-BV/xve-wsl-patches`
 - **Release**: `latest`
 
 ### Setting Up Your Patch Repository

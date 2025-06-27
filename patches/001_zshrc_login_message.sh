@@ -12,7 +12,7 @@ TARGET_FILE="/home/xve/.zshrc"
 PATCH_MARKER="# XVE WSL Login Patch - DO NOT REMOVE THIS LINE"
 LOGIN_MESSAGE='echo "Welcome to XVE WSL Environment! 🚀"
 echo "Run '\''als'\'' or '\''aliases'\'' to view available aliases"
-echo "Detailed Breakdown: https://github.com/jonasvanderhaegen-xve/developer-kit/blob/main/ALIASES.md"'
+echo "Detailed Breakdown: https://github.com/XVE-BV/developer-kit/blob/main/ALIASES.md"'
 
 # Apply patch (up migration)
 patch_up() {
